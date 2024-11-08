@@ -1,0 +1,19 @@
+version: '2.30'
+services:
+  api:
+    build: ./api
+    container_name: api_c
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./api:/app
+      - ./api/node_modules:/app/node_modules
+  idanimo:
+    build: ./Idanmo-Website-main
+    container_name: idanimo_c
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./Idanmo-Website-main/node_modules:/app/node_modules
+    stdin_open: true
+    tty: true
