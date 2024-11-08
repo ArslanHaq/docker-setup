@@ -44,3 +44,6 @@ to run docker-compose
 to remove or down docker-compose
 
 > docker-compose down --rmi all -v
+
+
+in Docker-compose file, update the second service folder name wrt your folder name
